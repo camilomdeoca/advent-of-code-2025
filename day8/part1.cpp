@@ -8,7 +8,7 @@
 #include <sstream>
 
 struct Vec3 {
-    float x, y, z;
+    uint64_t x, y, z;
 
     Vec3 operator-(const Vec3 &v)
     {
@@ -19,7 +19,7 @@ struct Vec3 {
         };
     }
 
-    float length2()
+    uint64_t length2()
     {
         return x*x + y*y + z*z;
     }
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 
     struct PairOfPosIdxAndDist {
         size_t i, j;
-        float dist;
+        uint64_t dist;
     };
 
     // using i < j
